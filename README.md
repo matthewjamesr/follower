@@ -1,24 +1,19 @@
-# README
+# Follower
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Your friendly interwebs Twitter follow bot for Mastodon.
 
-Things you may want to cover:
+# Goal
 
-* Ruby version
+Enable Mastodon users to login to Follower via their instance accounts and follow
+Twitter personas. Follower will Direct Message end-users with new posts every five
+minutes.
 
-* System dependencies
+# Setup
 
-* Configuration
+`git clone`
 
-* Database creation
+`bundle install`
 
-* Database initialization
+`touch .env && nano .env` => `mastodon_callback_url=INSERT_YOUR_URL`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rails s`
