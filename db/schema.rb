@@ -39,8 +39,10 @@ ActiveRecord::Schema.define(version: 20170415220918) do
     t.string   "token"
     t.string   "secret"
     t.string   "profile_image"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "instance"
+    t.boolean  "first_visit",   default: true
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
 end

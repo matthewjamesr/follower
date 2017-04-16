@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :token
       t.string :secret
       t.string :profile_image
+      t.string :instance
+      t.boolean :first_visit, default: true
 
       t.timestamps
     end
