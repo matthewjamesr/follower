@@ -1,0 +1,7 @@
+<h1>Personas#new</h1>
+
+<%= form_for @persona do |f| %>
+  <%= f.text_field :username %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.submit "Create" %>
+<% end %>

@@ -1,6 +1,14 @@
 <% if current_user %>
   Welcome <%= current_user.name + '!' %>
   <%= link_to 'Logout', logout_path %>
+  <br />
+  Let's <%= link_to 'Follow some people', new_persona_path %>.
+  <br /><br />
+  <h3> Who I am following:<h3>
+  <hr />
+  <% @personas.each do |p| %>
+    <%= p.username %>
+  <% end %>
 <% else %>
   Please <%= link_to 'authenticate', '/auth/mastodon' %>
 <% end %>

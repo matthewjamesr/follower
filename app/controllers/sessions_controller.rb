@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
   def welcome
+    if current_user
+      @personas = current_user.personas
+    end
   end
 
   def create
