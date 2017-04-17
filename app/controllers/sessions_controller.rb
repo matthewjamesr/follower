@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if @user.first_visit
       client = Mastodon::REST::Client.new(base_url: "https://" + @user.instance, bearer_token: @user.token)
-      client.create_status("TEST: I just #subscribed to my friends #tweets through #Follower. You should too! :smile: \n\nhttps://fake-follower-link.io")
+      client.create_status("TEST: I just #subscribed to my friends #tweets through #Follower. You should too! :smile: \n\nhttps://fake-follower-link.io", nil, [], "private")
       @user.first_visit = false
       @user.save
     end
